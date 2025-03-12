@@ -78,6 +78,7 @@ button:focus {
 
 .accordion-item .icons img {
   min-width: 25px;
+  transition: display 0.3s;
 }
 
 .accordion-item .icons .minus-icon {
