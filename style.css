@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --light-pink: hsl(275, 100%, 97%);
+  --grayish-purple: hsl(292, 16%, 49%);
+  --dark-purple: hsl(292, 42%, 14%);
+  --hover-purple: hsl(292, 75%, 35%);
+}
+
+body {
+  font-size: 16px;
+  font-family: "Work Sans", sans-serif;
+  background-color: var(--light-pink);
+  background-image: url("./images/background-pattern-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  background-color: transparent;
+  width: 100%;
+  padding: 1rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+button:hover,
+button:focus {
+  color: var(--hover-purple);
+  outline: none;
+}
+
+.container {
+  background-color: var(--white);
+  max-width: 600px;
+  padding: 1.5rem;
+  margin: 1rem;
+  border-radius: 1rem;
+}
+
+.faq-headline {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.faq-headline h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.accordion-container .accordion-item:not(:last-child) {
+  border-bottom: 2px solid var(--light-pink);
+}
+
+.accordion-item .icons img {
+  min-width: 25px;
+}
+
+.accordion-item .icons .minus-icon {
+  display: none;
+}
+
+.accordion-description {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+}
+
+.accordion-description p {
+  color: var(--grayish-purple);
+  padding: 1rem 0;
+}
+
+@media (max-width: 540px) {
+  body {
+    background-image: url("./images/background-pattern-mobile.svg");
+  }
+}
