@@ -5,7 +5,12 @@ accordionButtons.forEach((btn) => {
   btn.addEventListener("click", toggleAccordion);
 
   // Event saat tombol mendapatkan focus (misal dari Tab navigation)
-  btn.addEventListener("focus", toggleAccordion);
+  btn.addEventListener("keydown", function (e) {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      toggleAccordion.call(this);
+    }
+  });
 });
 
 function toggleAccordion() {
